@@ -1,0 +1,548 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FAFF82AD202AEC7A001B6536 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF82AC202AEC7A001B6536 /* AppDelegate.swift */; };
+		FAFF82AF202AEC7A001B6536 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF82AE202AEC7A001B6536 /* ViewController.swift */; };
+		FAFF82B1202AEC7A001B6536 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFF82B0202AEC7A001B6536 /* Assets.xcassets */; };
+		FAFF82B4202AEC7A001B6536 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFF82B2202AEC7A001B6536 /* Main.storyboard */; };
+		FAFF82C0202AEC7B001B6536 /* TouchSpeculaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF82BF202AEC7B001B6536 /* TouchSpeculaTests.swift */; };
+		FAFF82CB202AEC7B001B6536 /* TouchSpeculaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF82CA202AEC7B001B6536 /* TouchSpeculaUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAFF82BC202AEC7B001B6536 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAFF82A1202AEC7A001B6536 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAFF82A8202AEC7A001B6536;
+			remoteInfo = TouchSpecula;
+		};
+		FAFF82C7202AEC7B001B6536 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAFF82A1202AEC7A001B6536 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAFF82A8202AEC7A001B6536;
+			remoteInfo = TouchSpecula;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FAFF82A9202AEC7A001B6536 /* TouchSpecula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchSpecula.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAFF82AC202AEC7A001B6536 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FAFF82AE202AEC7A001B6536 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FAFF82B0202AEC7A001B6536 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAFF82B3202AEC7A001B6536 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAFF82B5202AEC7A001B6536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAFF82B6202AEC7A001B6536 /* TouchSpecula.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TouchSpecula.entitlements; sourceTree = "<group>"; };
+		FAFF82BB202AEC7B001B6536 /* TouchSpeculaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchSpeculaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAFF82BF202AEC7B001B6536 /* TouchSpeculaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchSpeculaTests.swift; sourceTree = "<group>"; };
+		FAFF82C1202AEC7B001B6536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAFF82C6202AEC7B001B6536 /* TouchSpeculaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchSpeculaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAFF82CA202AEC7B001B6536 /* TouchSpeculaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchSpeculaUITests.swift; sourceTree = "<group>"; };
+		FAFF82CC202AEC7B001B6536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAFF82A6202AEC7A001B6536 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAFF82B8202AEC7B001B6536 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAFF82C3202AEC7B001B6536 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FAFF82A0202AEC7A001B6536 = {
+			isa = PBXGroup;
+			children = (
+				FAFF82AB202AEC7A001B6536 /* TouchSpecula */,
+				FAFF82BE202AEC7B001B6536 /* TouchSpeculaTests */,
+				FAFF82C9202AEC7B001B6536 /* TouchSpeculaUITests */,
+				FAFF82AA202AEC7A001B6536 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FAFF82AA202AEC7A001B6536 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAFF82A9202AEC7A001B6536 /* TouchSpecula.app */,
+				FAFF82BB202AEC7B001B6536 /* TouchSpeculaTests.xctest */,
+				FAFF82C6202AEC7B001B6536 /* TouchSpeculaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAFF82AB202AEC7A001B6536 /* TouchSpecula */ = {
+			isa = PBXGroup;
+			children = (
+				FAFF82AC202AEC7A001B6536 /* AppDelegate.swift */,
+				FAFF82AE202AEC7A001B6536 /* ViewController.swift */,
+				FAFF82B0202AEC7A001B6536 /* Assets.xcassets */,
+				FAFF82B2202AEC7A001B6536 /* Main.storyboard */,
+				FAFF82B5202AEC7A001B6536 /* Info.plist */,
+				FAFF82B6202AEC7A001B6536 /* TouchSpecula.entitlements */,
+			);
+			path = TouchSpecula;
+			sourceTree = "<group>";
+		};
+		FAFF82BE202AEC7B001B6536 /* TouchSpeculaTests */ = {
+			isa = PBXGroup;
+			children = (
+				FAFF82BF202AEC7B001B6536 /* TouchSpeculaTests.swift */,
+				FAFF82C1202AEC7B001B6536 /* Info.plist */,
+			);
+			path = TouchSpeculaTests;
+			sourceTree = "<group>";
+		};
+		FAFF82C9202AEC7B001B6536 /* TouchSpeculaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FAFF82CA202AEC7B001B6536 /* TouchSpeculaUITests.swift */,
+				FAFF82CC202AEC7B001B6536 /* Info.plist */,
+			);
+			path = TouchSpeculaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAFF82A8202AEC7A001B6536 /* TouchSpecula */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAFF82CF202AEC7B001B6536 /* Build configuration list for PBXNativeTarget "TouchSpecula" */;
+			buildPhases = (
+				FAFF82A5202AEC7A001B6536 /* Sources */,
+				FAFF82A6202AEC7A001B6536 /* Frameworks */,
+				FAFF82A7202AEC7A001B6536 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TouchSpecula;
+			productName = TouchSpecula;
+			productReference = FAFF82A9202AEC7A001B6536 /* TouchSpecula.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FAFF82BA202AEC7B001B6536 /* TouchSpeculaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAFF82D2202AEC7B001B6536 /* Build configuration list for PBXNativeTarget "TouchSpeculaTests" */;
+			buildPhases = (
+				FAFF82B7202AEC7B001B6536 /* Sources */,
+				FAFF82B8202AEC7B001B6536 /* Frameworks */,
+				FAFF82B9202AEC7B001B6536 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAFF82BD202AEC7B001B6536 /* PBXTargetDependency */,
+			);
+			name = TouchSpeculaTests;
+			productName = TouchSpeculaTests;
+			productReference = FAFF82BB202AEC7B001B6536 /* TouchSpeculaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FAFF82C5202AEC7B001B6536 /* TouchSpeculaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAFF82D5202AEC7B001B6536 /* Build configuration list for PBXNativeTarget "TouchSpeculaUITests" */;
+			buildPhases = (
+				FAFF82C2202AEC7B001B6536 /* Sources */,
+				FAFF82C3202AEC7B001B6536 /* Frameworks */,
+				FAFF82C4202AEC7B001B6536 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAFF82C8202AEC7B001B6536 /* PBXTargetDependency */,
+			);
+			name = TouchSpeculaUITests;
+			productName = TouchSpeculaUITests;
+			productReference = FAFF82C6202AEC7B001B6536 /* TouchSpeculaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAFF82A1202AEC7A001B6536 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = GoToo;
+				TargetAttributes = {
+					FAFF82A8202AEC7A001B6536 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					FAFF82BA202AEC7B001B6536 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FAFF82A8202AEC7A001B6536;
+					};
+					FAFF82C5202AEC7B001B6536 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FAFF82A8202AEC7A001B6536;
+					};
+				};
+			};
+			buildConfigurationList = FAFF82A4202AEC7A001B6536 /* Build configuration list for PBXProject "TouchSpecula" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAFF82A0202AEC7A001B6536;
+			productRefGroup = FAFF82AA202AEC7A001B6536 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAFF82A8202AEC7A001B6536 /* TouchSpecula */,
+				FAFF82BA202AEC7B001B6536 /* TouchSpeculaTests */,
+				FAFF82C5202AEC7B001B6536 /* TouchSpeculaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAFF82A7202AEC7A001B6536 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAFF82B1202AEC7A001B6536 /* Assets.xcassets in Resources */,
+				FAFF82B4202AEC7A001B6536 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAFF82B9202AEC7B001B6536 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAFF82C4202AEC7B001B6536 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAFF82A5202AEC7A001B6536 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAFF82AF202AEC7A001B6536 /* ViewController.swift in Sources */,
+				FAFF82AD202AEC7A001B6536 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAFF82B7202AEC7B001B6536 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAFF82C0202AEC7B001B6536 /* TouchSpeculaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAFF82C2202AEC7B001B6536 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAFF82CB202AEC7B001B6536 /* TouchSpeculaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAFF82BD202AEC7B001B6536 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAFF82A8202AEC7A001B6536 /* TouchSpecula */;
+			targetProxy = FAFF82BC202AEC7B001B6536 /* PBXContainerItemProxy */;
+		};
+		FAFF82C8202AEC7B001B6536 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAFF82A8202AEC7A001B6536 /* TouchSpecula */;
+			targetProxy = FAFF82C7202AEC7B001B6536 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FAFF82B2202AEC7A001B6536 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAFF82B3202AEC7A001B6536 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAFF82CD202AEC7B001B6536 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FAFF82CE202AEC7B001B6536 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		FAFF82D0202AEC7B001B6536 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TouchSpecula/TouchSpecula.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TouchSpecula/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GoToo.TouchSpecula;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		FAFF82D1202AEC7B001B6536 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TouchSpecula/TouchSpecula.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TouchSpecula/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GoToo.TouchSpecula;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		FAFF82D3202AEC7B001B6536 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TouchSpeculaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GoToo.TouchSpeculaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TouchSpecula.app/Contents/MacOS/TouchSpecula";
+			};
+			name = Debug;
+		};
+		FAFF82D4202AEC7B001B6536 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TouchSpeculaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GoToo.TouchSpeculaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TouchSpecula.app/Contents/MacOS/TouchSpecula";
+			};
+			name = Release;
+		};
+		FAFF82D6202AEC7B001B6536 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TouchSpeculaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GoToo.TouchSpeculaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = TouchSpecula;
+			};
+			name = Debug;
+		};
+		FAFF82D7202AEC7B001B6536 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TouchSpeculaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GoToo.TouchSpeculaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = TouchSpecula;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAFF82A4202AEC7A001B6536 /* Build configuration list for PBXProject "TouchSpecula" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAFF82CD202AEC7B001B6536 /* Debug */,
+				FAFF82CE202AEC7B001B6536 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAFF82CF202AEC7B001B6536 /* Build configuration list for PBXNativeTarget "TouchSpecula" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAFF82D0202AEC7B001B6536 /* Debug */,
+				FAFF82D1202AEC7B001B6536 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAFF82D2202AEC7B001B6536 /* Build configuration list for PBXNativeTarget "TouchSpeculaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAFF82D3202AEC7B001B6536 /* Debug */,
+				FAFF82D4202AEC7B001B6536 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAFF82D5202AEC7B001B6536 /* Build configuration list for PBXNativeTarget "TouchSpeculaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAFF82D6202AEC7B001B6536 /* Debug */,
+				FAFF82D7202AEC7B001B6536 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAFF82A1202AEC7A001B6536 /* Project object */;
+}
