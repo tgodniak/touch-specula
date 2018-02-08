@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA8E0A52202B79BC00FB187E /* KantorAliorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E0A51202B79BC00FB187E /* KantorAliorAPI.swift */; };
+		FA8E0A54202B7A3C00FB187E /* CurrencyExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E0A53202B7A3C00FB187E /* CurrencyExchangeRate.swift */; };
+		FA8E0A57202BA87700FB187E /* XXX.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8E0A56202BA87700FB187E /* XXX.m */; };
 		FAFF82AD202AEC7A001B6536 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF82AC202AEC7A001B6536 /* AppDelegate.swift */; };
 		FAFF82AF202AEC7A001B6536 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF82AE202AEC7A001B6536 /* ViewController.swift */; };
 		FAFF82B1202AEC7A001B6536 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFF82B0202AEC7A001B6536 /* Assets.xcassets */; };
 		FAFF82B4202AEC7A001B6536 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFF82B2202AEC7A001B6536 /* Main.storyboard */; };
 		FAFF82C0202AEC7B001B6536 /* TouchSpeculaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF82BF202AEC7B001B6536 /* TouchSpeculaTests.swift */; };
 		FAFF82CB202AEC7B001B6536 /* TouchSpeculaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF82CA202AEC7B001B6536 /* TouchSpeculaUITests.swift */; };
+		FAFF82DC202AF00D001B6536 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF82DB202AF00D001B6536 /* WindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA8E0A51202B79BC00FB187E /* KantorAliorAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KantorAliorAPI.swift; sourceTree = "<group>"; };
+		FA8E0A53202B7A3C00FB187E /* CurrencyExchangeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyExchangeRate.swift; sourceTree = "<group>"; };
+		FA8E0A55202BA87700FB187E /* TouchSpecula-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TouchSpecula-Bridging-Header.h"; sourceTree = "<group>"; };
+		FA8E0A56202BA87700FB187E /* XXX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXX.m; sourceTree = "<group>"; };
 		FAFF82A9202AEC7A001B6536 /* TouchSpecula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchSpecula.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFF82AC202AEC7A001B6536 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFF82AE202AEC7A001B6536 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +54,8 @@
 		FAFF82C6202AEC7B001B6536 /* TouchSpeculaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchSpeculaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFF82CA202AEC7B001B6536 /* TouchSpeculaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchSpeculaUITests.swift; sourceTree = "<group>"; };
 		FAFF82CC202AEC7B001B6536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAFF82D8202AED78001B6536 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main.strings; sourceTree = "<group>"; };
+		FAFF82DB202AF00D001B6536 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,12 +86,18 @@
 		FAFF82A0202AEC7A001B6536 = {
 			isa = PBXGroup;
 			children = (
+				FA8E0A56202BA87700FB187E /* XXX.m */,
+				FA8E0A53202B7A3C00FB187E /* CurrencyExchangeRate.swift */,
+				FA8E0A51202B79BC00FB187E /* KantorAliorAPI.swift */,
+				FAFF82DB202AF00D001B6536 /* WindowController.swift */,
 				FAFF82AB202AEC7A001B6536 /* TouchSpecula */,
 				FAFF82BE202AEC7B001B6536 /* TouchSpeculaTests */,
 				FAFF82C9202AEC7B001B6536 /* TouchSpeculaUITests */,
 				FAFF82AA202AEC7A001B6536 /* Products */,
+				FA8E0A55202BA87700FB187E /* TouchSpecula-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		FAFF82AA202AEC7A001B6536 /* Products */ = {
 			isa = PBXGroup;
@@ -192,6 +208,7 @@
 				TargetAttributes = {
 					FAFF82A8202AEC7A001B6536 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					FAFF82BA202AEC7B001B6536 = {
@@ -257,8 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA8E0A57202BA87700FB187E /* XXX.m in Sources */,
+				FA8E0A54202B7A3C00FB187E /* CurrencyExchangeRate.swift in Sources */,
 				FAFF82AF202AEC7A001B6536 /* ViewController.swift in Sources */,
+				FAFF82DC202AF00D001B6536 /* WindowController.swift in Sources */,
 				FAFF82AD202AEC7A001B6536 /* AppDelegate.swift in Sources */,
+				FA8E0A52202B79BC00FB187E /* KantorAliorAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +319,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FAFF82B3202AEC7A001B6536 /* Base */,
+				FAFF82D8202AED78001B6536 /* pl */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -309,6 +331,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -366,6 +389,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -415,13 +439,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = TouchSpecula/TouchSpecula.entitlements;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = TouchSpecula/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GoToo.TouchSpecula;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TouchSpecula-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -430,13 +456,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = TouchSpecula/TouchSpecula.entitlements;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = TouchSpecula/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GoToo.TouchSpecula;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TouchSpecula-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
