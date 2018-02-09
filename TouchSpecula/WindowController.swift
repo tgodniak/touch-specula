@@ -9,10 +9,16 @@
 import Cocoa
 
 class WindowController: NSWindowController {
-    
+
     @IBOutlet weak var GoTooButton: NSButton!
 
+    static let dolarIdentifier = NSTouchBarItem.Identifier("GoToo.icon.dolar")
+    static let rateIdentifier = NSTouchBarItem.Identifier("GoToo.icon.rate")
+    
+    var ControlButton: NSButton!
     var KantorApi: KantorAliorAPI!
+    
+    var CurrentColor = NSColor.systemBlue
     var CurentExchangeRate = CurrencyExchangeRate(
         sellRate: 0.0,
         buyRate: 0.0,
@@ -24,12 +30,11 @@ class WindowController: NSWindowController {
         createControl()
         KantorApi = KantorAliorAPI()
         
-//        GoTooButton.title = "..."
-//        GoTooButton.bezelColor = NSColor.systemBlue
-//
-//
-//        updateRate()
-//        Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(updateRate), userInfo: nil, repeats: true)
+        GoTooButton.title = "..."
+        GoTooButton.bezelColor = NSColor.systemBlue
+        
+        updateRate()
+        Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(updateRate), userInfo: nil, repeats: true)
     }
     
     @objc func updateRate() -> Void {
@@ -43,21 +48,20 @@ class WindowController: NSWindowController {
     @objc func showRate() -> Void {
         print("RATE")
 
-        let rate = NSCustomTouchBarItem.init(identifier: AppDelegate.rateIdentifier)
-        let view = NSButton.init(title: "3.33", target: self, action: #selector(updateRate))
-        view.bezelColor = NSColor.systemPink
-        rate.view = view
+        let rate = NSCustomTouchBarItem.init(identifier: WindowController.rateIdentifier)
+        rate.view = GoTooButton
 
-        touchBar?.presentAsSystemModal(for: rate)
+        NSTouchBar.presentSystemModalFunctionBar(touchBar, systemTrayItemIdentifier: rate.identifier.rawValue)
     }
     
     func createControl() -> Void {
         DFRSystemModalShowsCloseBoxWhenFrontMost(true)
         
-        let dolar = NSCustomTouchBarItem.init(identifier: AppDelegate.dolarIdentifier)
-        let view = NSButton.init(title: "$", target: self, action: #selector(showRate))
-        view.bezelColor = NSColor.systemGreen
-        dolar.view = view
+        let dolar = NSCustomTouchBarItem.init(identifier: WindowController.dolarIdentifier)
+        ControlButton = NSButton.init(title: "$", target: self, action: #selector(showRate))
+
+        ControlButton.bezelColor = NSColor.systemBlue
+        dolar.view = ControlButton
         
         NSTouchBarItem.addSystemTrayItem(dolar)
         
@@ -67,17 +71,21 @@ class WindowController: NSWindowController {
     func updateColor(exchangeRate: CurrencyExchangeRate) -> Void {
         DispatchQueue.main.async {
             if self.CurentExchangeRate.buyRate > exchangeRate.buyRate {
-                self.GoTooButton.bezelColor = NSColor.systemRed
+                self.CurrentColor = NSColor.systemRed
+            } else if self.CurentExchangeRate.buyRate < exchangeRate.buyRate {
+                self.CurrentColor = NSColor.systemGreen
             } else {
-                self.GoTooButton.bezelColor = NSColor.systemGreen
+                print("-")
             }
+            self.GoTooButton.bezelColor = self.CurrentColor
+            self.ControlButton.bezelColor = self.CurrentColor
             self.CurentExchangeRate = exchangeRate;
         }
     }
     
     func update(exchangeRate: CurrencyExchangeRate) -> Void {
         DispatchQueue.main.async {
-            self.GoTooButton.title = "USD: " + exchangeRate.buyRate.description
+            self.GoTooButton.title = exchangeRate.buyRate.description + " zł"
         }
     }
     

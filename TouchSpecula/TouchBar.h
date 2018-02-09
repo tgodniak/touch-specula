@@ -9,7 +9,6 @@
 @import Cocoa;
 @import Foundation;
 
-extern void controlStrippify(NSView *, NSString *);
 extern void DFRElementSetControlStripPresenceForIdentifier(NSString *, BOOL);
 extern void DFRSystemModalShowsCloseBoxWhenFrontMost(BOOL);
 
@@ -23,8 +22,6 @@ extern void DFRSystemModalShowsCloseBoxWhenFrontMost(BOOL);
 
 - (void)addToControlStrip;
 
-- (void)toggleControlStripPresence:(BOOL)present;
-
 @end
 
 @interface NSTouchBar ()
@@ -32,24 +29,11 @@ extern void DFRSystemModalShowsCloseBoxWhenFrontMost(BOOL);
 + (void)presentSystemModalFunctionBar:(NSTouchBar *)touchBar
              systemTrayItemIdentifier:(NSString *)identifier;
 
-+ (void)dismissSystemModalFunctionBar:(NSTouchBar *)touchBar;
-
-+ (void)minimizeSystemModalFunctionBar:(NSTouchBar *)touchBar;
-
 @end
 
 @interface NSTouchBar (DFRAccess)
 
 - (void)presentAsSystemModalForItem:(NSTouchBarItem *)item;
 
-- (void)dismissSystemModal;
-
-- (void)minimizeSystemModal;
-
 @end
 
-@interface NSControlStripTouchBarItem: NSCustomTouchBarItem
-
-@property (nonatomic) BOOL isPresentInControlStrip;
-
-@end
