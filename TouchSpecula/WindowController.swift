@@ -23,7 +23,6 @@ class WindowController: NSWindowController {
         super.windowDidLoad()
     
         GoTooButton.title = "..."
-        GoTooButton.identifier = 
         GoTooButton.bezelColor = NSColor.systemBlue
         KantorApi = KantorAliorAPI()
         
