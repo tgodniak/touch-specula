@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA5685EC202D795F00B63A4F /* TouchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5685EB202D795F00B63A4F /* TouchBar.m */; };
+		FA5685EF202D7BEC00B63A4F /* DFRFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5685EE202D7BEC00B63A4F /* DFRFoundation.framework */; };
 		FA8E0A52202B79BC00FB187E /* KantorAliorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E0A51202B79BC00FB187E /* KantorAliorAPI.swift */; };
 		FA8E0A54202B7A3C00FB187E /* CurrencyExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E0A53202B7A3C00FB187E /* CurrencyExchangeRate.swift */; };
-		FA8E0A57202BA87700FB187E /* XXX.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8E0A56202BA87700FB187E /* XXX.m */; };
 		FAFF82AD202AEC7A001B6536 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF82AC202AEC7A001B6536 /* AppDelegate.swift */; };
 		FAFF82AF202AEC7A001B6536 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF82AE202AEC7A001B6536 /* ViewController.swift */; };
 		FAFF82B1202AEC7A001B6536 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFF82B0202AEC7A001B6536 /* Assets.xcassets */; };
@@ -37,10 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA5685EB202D795F00B63A4F /* TouchBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchBar.m; sourceTree = "<group>"; };
+		FA5685EE202D7BEC00B63A4F /* DFRFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DFRFoundation.framework; path = ../../../../System/Library/PrivateFrameworks/DFRFoundation.framework; sourceTree = "<group>"; };
 		FA8E0A51202B79BC00FB187E /* KantorAliorAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KantorAliorAPI.swift; sourceTree = "<group>"; };
 		FA8E0A53202B7A3C00FB187E /* CurrencyExchangeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyExchangeRate.swift; sourceTree = "<group>"; };
 		FA8E0A55202BA87700FB187E /* TouchSpecula-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TouchSpecula-Bridging-Header.h"; sourceTree = "<group>"; };
-		FA8E0A56202BA87700FB187E /* XXX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXX.m; sourceTree = "<group>"; };
+		FA93FBC5202C7BAC0081F2E0 /* TouchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchBar.h; sourceTree = "<group>"; };
 		FAFF82A9202AEC7A001B6536 /* TouchSpecula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchSpecula.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFF82AC202AEC7A001B6536 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFF82AE202AEC7A001B6536 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5685EF202D7BEC00B63A4F /* DFRFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,18 +87,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA5685ED202D7BEB00B63A4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA5685EE202D7BEC00B63A4F /* DFRFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FAFF82A0202AEC7A001B6536 = {
 			isa = PBXGroup;
 			children = (
-				FA8E0A56202BA87700FB187E /* XXX.m */,
-				FA8E0A53202B7A3C00FB187E /* CurrencyExchangeRate.swift */,
-				FA8E0A51202B79BC00FB187E /* KantorAliorAPI.swift */,
-				FAFF82DB202AF00D001B6536 /* WindowController.swift */,
 				FAFF82AB202AEC7A001B6536 /* TouchSpecula */,
 				FAFF82BE202AEC7B001B6536 /* TouchSpeculaTests */,
 				FAFF82C9202AEC7B001B6536 /* TouchSpeculaUITests */,
 				FAFF82AA202AEC7A001B6536 /* Products */,
 				FA8E0A55202BA87700FB187E /* TouchSpecula-Bridging-Header.h */,
+				FA5685ED202D7BEB00B63A4F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 			usesTabs = 0;
@@ -112,12 +121,17 @@
 		FAFF82AB202AEC7A001B6536 /* TouchSpecula */ = {
 			isa = PBXGroup;
 			children = (
+				FA8E0A53202B7A3C00FB187E /* CurrencyExchangeRate.swift */,
+				FA8E0A51202B79BC00FB187E /* KantorAliorAPI.swift */,
+				FAFF82DB202AF00D001B6536 /* WindowController.swift */,
 				FAFF82AC202AEC7A001B6536 /* AppDelegate.swift */,
 				FAFF82AE202AEC7A001B6536 /* ViewController.swift */,
 				FAFF82B0202AEC7A001B6536 /* Assets.xcassets */,
 				FAFF82B2202AEC7A001B6536 /* Main.storyboard */,
 				FAFF82B5202AEC7A001B6536 /* Info.plist */,
 				FAFF82B6202AEC7A001B6536 /* TouchSpecula.entitlements */,
+				FA93FBC5202C7BAC0081F2E0 /* TouchBar.h */,
+				FA5685EB202D795F00B63A4F /* TouchBar.m */,
 			);
 			path = TouchSpecula;
 			sourceTree = "<group>";
@@ -274,10 +288,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA8E0A57202BA87700FB187E /* XXX.m in Sources */,
 				FA8E0A54202B7A3C00FB187E /* CurrencyExchangeRate.swift in Sources */,
 				FAFF82AF202AEC7A001B6536 /* ViewController.swift in Sources */,
 				FAFF82DC202AF00D001B6536 /* WindowController.swift in Sources */,
+				FA5685EC202D795F00B63A4F /* TouchBar.m in Sources */,
 				FAFF82AD202AEC7A001B6536 /* AppDelegate.swift in Sources */,
 				FA8E0A52202B79BC00FB187E /* KantorAliorAPI.swift in Sources */,
 			);
@@ -442,6 +456,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 				INFOPLIST_FILE = TouchSpecula/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GoToo.TouchSpecula;
@@ -459,6 +477,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 				INFOPLIST_FILE = TouchSpecula/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GoToo.TouchSpecula;

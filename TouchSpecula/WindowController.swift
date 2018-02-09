@@ -7,13 +7,10 @@
 //
 
 import Cocoa
-import Foundation
-import AppKit
 
 class WindowController: NSWindowController {
     
     @IBOutlet weak var GoTooButton: NSButton!
-    @IBOutlet weak var GoTooLabel: NSTextField!
 
     var KantorApi: KantorAliorAPI!
     var CurentExchangeRate = CurrencyExchangeRate(
@@ -26,6 +23,7 @@ class WindowController: NSWindowController {
         super.windowDidLoad()
     
         GoTooButton.title = "..."
+        GoTooButton.identifier = 
         GoTooButton.bezelColor = NSColor.systemBlue
         KantorApi = KantorAliorAPI()
         
@@ -54,7 +52,6 @@ class WindowController: NSWindowController {
     func update(exchangeRate: CurrencyExchangeRate) -> Void {
         DispatchQueue.main.async {
             self.GoTooButton.title = "USD: " + exchangeRate.buyRate.description
-            self.GoTooLabel.cell?.title = exchangeRate.buyRate.description
         }
     }
     

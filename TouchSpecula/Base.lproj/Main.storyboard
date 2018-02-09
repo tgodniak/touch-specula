@@ -99,9 +99,9 @@
                             <touchBarItem id="WfV-x4-TdY">
                                 <viewController key="viewController" id="IKI-lJ-sx8">
                                     <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BZq-Tp-2aZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="push" title="GoToo" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vXA-rx-yC6">
+                                        <buttonCell key="cell" type="push" title="USD: 0.00" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vXA-rx-yC6">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" usesAppearanceFont="YES"/>
                                         </buttonCell>
@@ -110,30 +110,12 @@
                                         </connections>
                                     </button>
                                 </viewController>
-                                <size key="designTimeSize" width="72" height="30"/>
-                            </touchBarItem>
-                            <touchBarItem id="Soe-1u-a9M">
-                                <viewController key="viewController" id="OVZ-Mc-TiH">
-                                    <textField key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rKl-k6-Pza">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="24"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <textFieldCell key="cell" borderStyle="bezel" alignment="left" title="_______" drawsBackground="YES" id="lm6-Ui-wQT">
-                                            <font key="font" usesAppearanceFont="YES"/>
-                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                        <connections>
-                                            <action selector="labelClick:" target="B8D-0N-5wS" id="sxZ-uD-10J"/>
-                                        </connections>
-                                    </textField>
-                                </viewController>
-                                <size key="designTimeSize" width="50" height="24"/>
+                                <size key="designTimeSize" width="90" height="30"/>
                             </touchBarItem>
                         </touchBarItems>
                     </touchBar>
                     <connections>
                         <outlet property="GoTooButton" destination="BZq-Tp-2aZ" id="eOt-Yd-qGV"/>
-                        <outlet property="GoTooLabel" destination="rKl-k6-Pza" id="cj9-Pj-R8T"/>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
                     </connections>
                 </windowController>
