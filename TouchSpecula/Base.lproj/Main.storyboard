@@ -98,8 +98,8 @@
                         <touchBarItems>
                             <touchBarItem id="WfV-x4-TdY">
                                 <viewController key="viewController" id="IKI-lJ-sx8">
-                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BZq-Tp-2aZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
+                                    <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BZq-Tp-2aZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="102" height="41"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="push" title="USD: 0.00" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vXA-rx-yC6">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -134,7 +134,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-81" y="613"/>
+            <point key="canvasLocation" x="-328" y="500"/>
         </scene>
     </scenes>
 </document>

@@ -21,20 +21,47 @@ class WindowController: NSWindowController {
     
     override func windowDidLoad() {
         super.windowDidLoad()
-    
-        GoTooButton.title = "..."
-        GoTooButton.bezelColor = NSColor.systemBlue
+        createControl()
         KantorApi = KantorAliorAPI()
         
-        updateRate()
-        Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(WindowController.updateRate), userInfo: nil, repeats: true)
+//        GoTooButton.title = "..."
+//        GoTooButton.bezelColor = NSColor.systemBlue
+//
+//
+//        updateRate()
+//        Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(updateRate), userInfo: nil, repeats: true)
     }
     
     @objc func updateRate() -> Void {
+        print("XXXX")
         KantorApi.fetchRates() { rate in
             self.updateColor(exchangeRate: rate);
             self.update(exchangeRate: rate)
         }
+    }
+    
+    @objc func showRate() -> Void {
+        print("RATE")
+
+        let rate = NSCustomTouchBarItem.init(identifier: AppDelegate.rateIdentifier)
+        let view = NSButton.init(title: "3.33", target: self, action: #selector(updateRate))
+        view.bezelColor = NSColor.systemPink
+        rate.view = view
+
+        touchBar?.presentAsSystemModal(for: rate)
+    }
+    
+    func createControl() -> Void {
+        DFRSystemModalShowsCloseBoxWhenFrontMost(true)
+        
+        let dolar = NSCustomTouchBarItem.init(identifier: AppDelegate.dolarIdentifier)
+        let view = NSButton.init(title: "$", target: self, action: #selector(showRate))
+        view.bezelColor = NSColor.systemGreen
+        dolar.view = view
+        
+        NSTouchBarItem.addSystemTrayItem(dolar)
+        
+        DFRElementSetControlStripPresenceForIdentifier(dolar.identifier.rawValue, true);
     }
     
     func updateColor(exchangeRate: CurrencyExchangeRate) -> Void {
