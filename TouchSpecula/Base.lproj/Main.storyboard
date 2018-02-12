@@ -97,10 +97,38 @@
                                 </viewController>
                                 <size key="designTimeSize" width="72" height="30"/>
                             </touchBarItem>
+                            <touchBarItem id="qFh-yZ-o9Z">
+                                <viewController key="viewController" id="xWB-na-gER">
+                                    <view key="view" translatesAutoresizingMaskIntoConstraints="NO" id="QHR-q5-bvn">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </view>
+                                </viewController>
+                                <size key="designTimeSize" width="200" height="30"/>
+                            </touchBarItem>
+                            <touchBarItem id="ZhU-oP-5fE">
+                                <viewController key="viewController" id="U6L-PL-JKw">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZLe-GI-P4e">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="More ..." bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FSC-43-pid">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="moreClick:" target="B8D-0N-5wS" id="tdg-5r-T8j"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                                <size key="designTimeSize" width="72" height="30"/>
+                            </touchBarItem>
                         </touchBarItems>
                     </touchBar>
                     <connections>
+                        <outlet property="graphView" destination="qFh-yZ-o9Z" id="t7Z-JR-d9d"/>
+                        <outlet property="moreButton" destination="ZLe-GI-P4e" id="yWU-em-0DU"/>
                         <outlet property="rateButton" destination="BZq-Tp-2aZ" id="eOt-Yd-qGV"/>
+                        <outlet property="rateView" destination="QHR-q5-bvn" id="EjS-UX-sdc"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

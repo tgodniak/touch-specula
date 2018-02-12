@@ -13,4 +13,5 @@ struct CurrencyExchangeRate {
     var buyRate: Float
     var sourceCurrencyCode: String
     var destinationCurrencyCode: String
+    var history: [Int]
 }

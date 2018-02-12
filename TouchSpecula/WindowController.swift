@@ -9,9 +9,12 @@
 import Cocoa
 
 @available(OSX 10.12.2, *)
-class WindowController: NSWindowController {
+class WindowController: NSWindowController, NSTouchBarDelegate, CAAnimationDelegate {
 
     @IBOutlet weak var rateButton: NSButton!
+    @IBOutlet weak var graphView: NSTouchBarItem!
+    @IBOutlet weak var rateView: NSView!
+    @IBOutlet weak var moreButton: NSButton!
     
     static let dolarIdentifier = NSTouchBarItem.Identifier("GoToo.icon.dolar")
     static let rateIdentifier = NSTouchBarItem.Identifier("GoToo.icon.rate")
@@ -20,11 +23,13 @@ class WindowController: NSWindowController {
     var KantorApi: KantorAliorAPI!
     
     var currentColor = NSColor.systemBlue
-    var CurentExchangeRate = CurrencyExchangeRate(
+    var curentExchangeRate = CurrencyExchangeRate(
         sellRate: 0.0,
         buyRate: 0.0,
         sourceCurrencyCode: "USD",
-        destinationCurrencyCode: "PLN")
+        destinationCurrencyCode: "PLN",
+        history: [])
+
     
     override func windowDidLoad() {
         super.windowDidLoad()
@@ -33,16 +38,52 @@ class WindowController: NSWindowController {
         
         rateButton.title = "..."
         rateButton.bezelColor = NSColor.systemBlue
+    
+        graphView.view?.isHidden = false;
+        moreButton.title = "Close"
         
+        rateView.wantsLayer = true
+
         updateRate()
+        
         Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(updateRate), userInfo: nil, repeats: true)
     }
     
+    func createGraph(history: [Int]) -> CAShapeLayer {
+        let layer = CAShapeLayer()
+        let path = NSBezierPath()
+        
+        if history.count > 0 {
+            let min = history.min()
+            let max = history.max()
+            let ratio = Double(28) / Double(max! - min!)
+            
+            path.move(to: NSMakePoint(2, CGFloat(Double(history.first! - min!) * ratio)))
+            var i = 1
+            for entry in history {
+                path.line(to: NSMakePoint(CGFloat(2 + i), CGFloat(Double(entry - min!) * ratio)))
+                i = i + 1
+            }
+            
+            layer.path = path.cgPath
+            layer.lineWidth = 2
+            layer.strokeColor =  NSColor.green.cgColor
+            layer.fillColor = NSColor.clear.cgColor
+        }
+        return layer
+    }
+
     @objc func updateRate() -> Void {
-        print("XXXX")
         KantorApi.fetchRates() { rate in
-            self.updateColor(exchangeRate: rate);
+            self.updateColor(exchangeRate: rate)
             self.update(exchangeRate: rate)
+            let layer = self.createGraph(history: rate.history)
+            if ((self.rateView.layer?.sublayers?.count) != nil) {
+                let lastLayer = self.rateView.layer?.sublayers?.last
+                self.rateView.layer?.replaceSublayer(lastLayer!, with: layer)
+            } else {
+                self.rateView.layer?.addSublayer(layer)
+            }
         }
     }
     
@@ -71,16 +112,14 @@ class WindowController: NSWindowController {
     
     func updateColor(exchangeRate: CurrencyExchangeRate) -> Void {
         DispatchQueue.main.async {
-            if self.CurentExchangeRate.buyRate > exchangeRate.buyRate {
+            if self.curentExchangeRate.buyRate > exchangeRate.buyRate {
                 self.currentColor = NSColor.systemRed
-            } else if self.CurentExchangeRate.buyRate < exchangeRate.buyRate {
+            } else if self.curentExchangeRate.buyRate < exchangeRate.buyRate {
                 self.currentColor = NSColor.systemGreen
-            } else {
-                print("-")
             }
             self.rateButton.bezelColor = self.currentColor
             self.controlButton.bezelColor = self.currentColor
-            self.CurentExchangeRate = exchangeRate;
+            self.curentExchangeRate = exchangeRate;
         }
     }
     
@@ -90,8 +129,39 @@ class WindowController: NSWindowController {
         }
     }
     
+    @IBAction func moreClick(_ sender: Any) {
+        if moreButton.title == "More ..." {
+            moreButton.title = "Close"
+            graphView.view?.isHidden = false
+        } else {
+            moreButton.title = "More ..."
+            graphView.view?.isHidden = true
+        }
+    }
+    
     @IBAction func buttonClick(_ sender: Any) {
         rateButton.bezelColor = NSColor.systemOrange
         Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(WindowController.updateRate), userInfo: nil, repeats: false)
+    }
+}
+
+extension NSBezierPath {
+    public var cgPath: CGPath {
+        let path = CGMutablePath()
+        var points = [CGPoint](repeating: .zero, count: 3)
+        for i in 0 ..< self.elementCount {
+            let type = self.element(at: i, associatedPoints: &points)
+            switch type {
+            case .moveToBezierPathElement:
+                path.move(to: points[0])
+            case .lineToBezierPathElement:
+                path.addLine(to: points[0])
+            case .curveToBezierPathElement:
+                path.addCurve(to: points[2], control1: points[0], control2: points[1])
+            case .closePathBezierPathElement:
+                path.closeSubpath()
+            }
+        }
+        return path
     }
 }

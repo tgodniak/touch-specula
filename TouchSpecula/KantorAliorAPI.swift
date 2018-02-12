@@ -35,13 +35,17 @@ class KantorAliorAPI: NSObject {
     }
     
     func ratesFromJSONData(data: Data?) -> CurrencyExchangeRate? {
-        if let json = try? JSONSerialization.jsonObject(with: data!, options: []) {
-            var x = json as! [String: Any]
+        if let json = try? JSONSerialization.jsonObject(with: data!, options: []) as! [String:Any] {
+            var history: [Int] = []
+            for result in json["history"] as! [[String:Any]] {
+                history.append(result["r"] as! Int)
+            }
             return CurrencyExchangeRate(
-                sellRate: formatRate(rate: x["actualSellRate"] as! String),
-                buyRate: formatRate(rate: x["actualBuyRate"] as! String),
+                sellRate: formatRate(rate: json["actualSellRate"] as! String),
+                buyRate: formatRate(rate: json["actualBuyRate"] as! String),
                 sourceCurrencyCode: "USD",
-                destinationCurrencyCode: "PLN"
+                destinationCurrencyCode: "PLN",
+                history: history
             )
         } else {
             return nil

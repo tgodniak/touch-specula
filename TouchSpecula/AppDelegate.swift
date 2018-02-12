@@ -9,6 +9,7 @@
 import Cocoa
 
 @NSApplicationMain
+
 class AppDelegate: NSObject, NSApplicationDelegate, NSTouchBarDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
