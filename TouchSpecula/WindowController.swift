@@ -8,17 +8,18 @@
 
 import Cocoa
 
+@available(OSX 10.12.2, *)
 class WindowController: NSWindowController {
 
-    @IBOutlet weak var GoTooButton: NSButton!
-
+    @IBOutlet weak var rateButton: NSButton!
+    
     static let dolarIdentifier = NSTouchBarItem.Identifier("GoToo.icon.dolar")
     static let rateIdentifier = NSTouchBarItem.Identifier("GoToo.icon.rate")
     
-    var ControlButton: NSButton!
+    var controlButton: NSButton!
     var KantorApi: KantorAliorAPI!
     
-    var CurrentColor = NSColor.systemBlue
+    var currentColor = NSColor.systemBlue
     var CurentExchangeRate = CurrencyExchangeRate(
         sellRate: 0.0,
         buyRate: 0.0,
@@ -30,8 +31,8 @@ class WindowController: NSWindowController {
         createControl()
         KantorApi = KantorAliorAPI()
         
-        GoTooButton.title = "..."
-        GoTooButton.bezelColor = NSColor.systemBlue
+        rateButton.title = "..."
+        rateButton.bezelColor = NSColor.systemBlue
         
         updateRate()
         Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(updateRate), userInfo: nil, repeats: true)
@@ -49,7 +50,7 @@ class WindowController: NSWindowController {
         print("RATE")
 
         let rate = NSCustomTouchBarItem.init(identifier: WindowController.rateIdentifier)
-        rate.view = GoTooButton
+        rate.view = rateButton
 
         NSTouchBar.presentSystemModalFunctionBar(touchBar, systemTrayItemIdentifier: rate.identifier.rawValue)
     }
@@ -58,10 +59,10 @@ class WindowController: NSWindowController {
         DFRSystemModalShowsCloseBoxWhenFrontMost(true)
         
         let dolar = NSCustomTouchBarItem.init(identifier: WindowController.dolarIdentifier)
-        ControlButton = NSButton.init(title: "$", target: self, action: #selector(showRate))
+        controlButton = NSButton.init(title: "$", target: self, action: #selector(showRate))
 
-        ControlButton.bezelColor = NSColor.systemBlue
-        dolar.view = ControlButton
+        controlButton.bezelColor = NSColor.systemBlue
+        dolar.view = controlButton
         
         NSTouchBarItem.addSystemTrayItem(dolar)
         
@@ -71,26 +72,26 @@ class WindowController: NSWindowController {
     func updateColor(exchangeRate: CurrencyExchangeRate) -> Void {
         DispatchQueue.main.async {
             if self.CurentExchangeRate.buyRate > exchangeRate.buyRate {
-                self.CurrentColor = NSColor.systemRed
+                self.currentColor = NSColor.systemRed
             } else if self.CurentExchangeRate.buyRate < exchangeRate.buyRate {
-                self.CurrentColor = NSColor.systemGreen
+                self.currentColor = NSColor.systemGreen
             } else {
                 print("-")
             }
-            self.GoTooButton.bezelColor = self.CurrentColor
-            self.ControlButton.bezelColor = self.CurrentColor
+            self.rateButton.bezelColor = self.currentColor
+            self.controlButton.bezelColor = self.currentColor
             self.CurentExchangeRate = exchangeRate;
         }
     }
     
     func update(exchangeRate: CurrencyExchangeRate) -> Void {
         DispatchQueue.main.async {
-            self.GoTooButton.title = exchangeRate.buyRate.description + " zł"
+            self.rateButton.title = exchangeRate.buyRate.description + " zł"
         }
     }
     
     @IBAction func buttonClick(_ sender: Any) {
-        GoTooButton.bezelColor = NSColor.systemOrange
+        rateButton.bezelColor = NSColor.systemOrange
         Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(WindowController.updateRate), userInfo: nil, repeats: false)
     }
 }
