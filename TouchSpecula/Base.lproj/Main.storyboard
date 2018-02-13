@@ -100,11 +100,11 @@
                             <touchBarItem id="qFh-yZ-o9Z">
                                 <viewController key="viewController" id="xWB-na-gER">
                                     <view key="view" translatesAutoresizingMaskIntoConstraints="NO" id="QHR-q5-bvn">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="30"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </view>
                                 </viewController>
-                                <size key="designTimeSize" width="200" height="30"/>
+                                <size key="designTimeSize" width="400" height="30"/>
                             </touchBarItem>
                             <touchBarItem id="ZhU-oP-5fE">
                                 <viewController key="viewController" id="U6L-PL-JKw">

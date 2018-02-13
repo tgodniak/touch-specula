@@ -29,7 +29,6 @@ class WindowController: NSWindowController, NSTouchBarDelegate, CAAnimationDeleg
         sourceCurrencyCode: "USD",
         destinationCurrencyCode: "PLN",
         history: [])
-
     
     override func windowDidLoad() {
         super.windowDidLoad()
@@ -43,7 +42,9 @@ class WindowController: NSWindowController, NSTouchBarDelegate, CAAnimationDeleg
         moreButton.title = "Close"
         
         rateView.wantsLayer = true
-
+//        rateView.layer?.borderWidth = 1
+//        rateView.layer?.borderColor = NSColor.blue.cgColor
+        
         updateRate()
         
         Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(updateRate), userInfo: nil, repeats: true)
@@ -52,7 +53,7 @@ class WindowController: NSWindowController, NSTouchBarDelegate, CAAnimationDeleg
     func createGraph(history: [Int]) -> CAShapeLayer {
         let layer = CAShapeLayer()
         let path = NSBezierPath()
-        
+
         if history.count > 0 {
             let min = history.min()
             let max = history.max()
@@ -61,14 +62,13 @@ class WindowController: NSWindowController, NSTouchBarDelegate, CAAnimationDeleg
             path.move(to: NSMakePoint(2, CGFloat(Double(history.first! - min!) * ratio)))
             var i = 1
             for entry in history {
-                path.line(to: NSMakePoint(CGFloat(2 + i), CGFloat(Double(entry - min!) * ratio)))
+                path.line(to: NSMakePoint(CGFloat(2 + i * 2), CGFloat(Double(entry - min!) * ratio)))
                 i = i + 1
             }
             
             layer.path = path.cgPath
             layer.lineWidth = 2
-            layer.strokeColor =  NSColor.green.cgColor
-            layer.fillColor = NSColor.clear.cgColor
+            layer.strokeColor = currentColor.cgColor
         }
         return layer
     }
@@ -77,12 +77,21 @@ class WindowController: NSWindowController, NSTouchBarDelegate, CAAnimationDeleg
         KantorApi.fetchRates() { rate in
             self.updateColor(exchangeRate: rate)
             self.update(exchangeRate: rate)
-            let layer = self.createGraph(history: rate.history)
-            if ((self.rateView.layer?.sublayers?.count) != nil) {
-                let lastLayer = self.rateView.layer?.sublayers?.last
-                self.rateView.layer?.replaceSublayer(lastLayer!, with: layer)
-            } else {
+            
+            DispatchQueue.main.async {
+                let layer = self.createGraph(history: rate.history)
+                let label = CATextLayer()
+                label.string = "buy: " + rate.buyRate.description + "\nsell: " + rate.sellRate.description
+                label.foregroundColor = NSColor.yellow.cgColor
+                label.backgroundColor = NSColor.clear.cgColor
+                label.fontSize = 10
+                label.contentsScale = 2
+                label.font = NSFont.systemFont(ofSize: 10, weight: NSFont.Weight.semibold)
+                label.frame = NSRect.init(x: 210, y: 4, width: 100, height: 22)
+                
+                self.rateView.layer?.sublayers?.removeAll()
                 self.rateView.layer?.addSublayer(layer)
+                self.rateView.layer?.addSublayer(label)
             }
         }
     }
